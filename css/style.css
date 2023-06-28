@@ -1,0 +1,282 @@
+sass --help {
+  /* Cursor*/
+  cursor: none;
+}
+
+#cursor, #aura {
+  position: absolute;
+  border-radius: 100%;
+  -webkit-transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transition 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transition 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transition 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transition 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity, 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) -webkit-transition 0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+}
+#cursor #cursor, #aura #cursor {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#cursor #cursor #aura, #aura #cursor #aura {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.027);
+  -webkit-transform: translate(5px 5px);
+          transform: translate(5px 5px);
+}
+
+/* Обычный */
+@font-face {
+	font-family: 'helvetica_light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('helvetica_light'),
+		url('../fonts/helvetica_light.otf')
+}
+@font-face {
+	font-family: 'helvetica_regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('helvetica_regular'),
+		url('../fonts/helvetica_regular.otf')
+}
+
+@font-face {
+	font-family: 'helvetica_lightoblique';
+	font-style: normal;
+	font-weight: normal;
+	src: local('helvetica_lightoblique'),
+		url('../fonts/helvetica_lightoblique.otf')
+}
+
+@font-face {
+	font-family: 'helvetica_cyr_oblique';
+	font-style: normal;
+	font-weight: normal;
+	src: local('helvetica_cyr_oblique'),
+		url('../fonts/helvetica_cyr_oblique.ttf')
+}
+ body {
+    font-family: 'helvetica_light';
+    font-size: 10px;
+    color: black;
+    line-height: 1;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1{
+font-family: 'helvetica_lightoblique';
+font-size: 90px;
+color: black;
+line-height: 1.2;
+font-weight: 300;
+padding-top: 100px
+
+}
+h2{
+  font-family: 'helvetica_light';
+  font-size: 25px;
+  color: black;
+  line-height: 1.2;
+  font-weight: 300;
+  padding-top: 80px;
+}
+
+h4{
+  position: absolute;
+  top: 430px;
+  left: 750px;
+  font-family: 'helvetica_light';
+  font-size: 25px;
+  color: white;
+  line-height: 1.2;
+  font-weight: 300;
+  padding-top: 80px;
+}
+
+/* Container */
+ .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+
+ /* Header */
+ .header {
+     width: 100%;
+     padding-top: 30px;
+
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 1000;
+ }
+
+ .header__inner {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .header__logo {
+     font-size: 30px;
+     font-weight: 300;
+     color: black;
+ }
+
+
+ /* Nav */
+ .nav {
+     font-size: 19px;
+     text-transform: uppercase;
+ }
+
+ .nav__link {
+     display: inline-block;
+     vertical-align: top;
+     margin: 0 19px;
+     position: relative;
+
+     color: black;
+     text-decoration: none;
+
+     transition: color .1s linear;
+ }
+
+ .nav__link:after {
+     content: "";
+     display: block;
+     width: 100%;
+     height: 1px;
+
+     background-color: #000AFF;
+     opacity: 0;
+
+     position: absolute;
+     top: 100%;
+     left: 0;
+     z-index: 1;
+
+     transition: opacity .1s linear;
+ }
+
+ .nav__link:hover {
+     color: #000AFF;
+ }
+
+ .nav__link:hover:after,
+ .nav__link.active:after {
+     opacity: 1;
+ }
+
+ .nav__link.active {
+     color: #000AFF;
+ }
+
+ /* Button */
+  /*.btn {
+     display: inline-block;
+     vertical-align: top;
+     padding: 8px 30px;
+
+     border: 1px solid black;
+
+     font-size: 14px;
+     font-weight: 700;
+     color: black;
+     text-transform: uppercase;
+     text-decoration: none;
+
+     transition: background .1s linear, color .1s linear;
+ }
+
+ .btn:hover {
+     background-color: #000AFF;
+     color: #333;
+ } */
+
+ .icon_logo {
+   fill: #ffff
+   width: 144px;
+   height: 144px;
+   padding-left: 200px;
+ }
+  /*
+ .icon_logo1 {
+   width: 1035px;
+   height: 1035px;
+ }*/
+
+  /* Content */
+  .content{
+
+  }
+
+    /* Footer */
+
+    /*.footer{
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 20px
+      background-color: #0000;
+      margin-top: auto;
+      min-height: 1200px
+    }*/
+
+  .square {
+    margin-top: 70px;
+    width: 1200px;
+    height: 520px;
+    border-radius: 100px;
+    border: 1px solid #000;
+    background: #000;
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+
+  .column {
+    padding-left: 15px;
+    float: right;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    display: table;
+    clear: both;}
+
+.btn {
+  margin-left: 900px;
+  font-family: "helvetica_light";
+  font-size: 20px;
+  background: #000AFF;
+  width: 5px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFF;
+  border-radius: 100px;
+  border: 1px solid #000AFF;
+  background: #000AFF;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.05);
+
+}
